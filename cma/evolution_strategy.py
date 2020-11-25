@@ -2858,7 +2858,7 @@ class CMAEvolutionStrategy(interfaces.OOOptimizer):
     negative after update, this must be considered as a bug.
     Variances `self.sm.variances`=%s""" % str(self.sm.variances))
         self._updateBDfromSM(self.sm)
-
+        print(self.sm.covariance_matrix)
         # step-size adaptation, adapt sigma
         # in case of TPA, function_values[0] and [1] must reflect samples colinear to xmean - xmean_old
         try:
